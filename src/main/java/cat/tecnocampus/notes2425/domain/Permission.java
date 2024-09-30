@@ -16,4 +16,9 @@ public record Permission(
 
         boolean canRead,
         boolean canEdit) {
+
+        public UserLab getOwner() {return owner;}
+        public Note getNote() {return note;}
+        public boolean getCanRead() {return canRead;}
+        public boolean getCanEdit() {return canEdit;}
 }

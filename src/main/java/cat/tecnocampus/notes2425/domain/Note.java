@@ -1,5 +1,6 @@
 package cat.tecnocampus.notes2425.domain;
 
+import io.swagger.v3.oas.annotations.info.Contact;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
@@ -27,4 +28,9 @@ public record Note(
                 inverseJoinColumns = @JoinColumn(name = "tag_id")
         )
         Set<Tag> tags) {
+
+        public Number getId() {return id;}
+        public String getTitle() {return title;}
+        public String getContent() {return content;}
+        public LocalDateTime getCreationDate() {return creationDate;}
 }

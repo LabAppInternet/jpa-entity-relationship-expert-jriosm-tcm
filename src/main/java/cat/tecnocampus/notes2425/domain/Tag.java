@@ -7,4 +7,6 @@ public record Tag(
         @Id
         String name
 ) {
+
+        public String getName() {return name;}
 }

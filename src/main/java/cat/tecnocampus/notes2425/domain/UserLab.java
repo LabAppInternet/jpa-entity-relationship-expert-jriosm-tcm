@@ -16,4 +16,6 @@ public record UserLab(
     @OneToMany(mappedBy = "owner")
     List<Note> notes
 ) {
+
+    public Number getId() {return id;}
 }
